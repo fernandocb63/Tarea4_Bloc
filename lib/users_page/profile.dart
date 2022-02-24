@@ -143,12 +143,9 @@ class _ProfileState extends State<Profile> {
                 SizedBox(height: 48),
                 BlocConsumer<CuentasBloc, CuentasState>(
                 listener: (context, state) {
-                  // TODO: implement listener
                 },
                 builder: (context, state) {
                   if (state is CuentaSelected){
-                    // return Text("aaaaaaa");
-                    //ListView dentro de una columna 
                     return Expanded(
                       child: ListView.builder(
                       itemCount: (state.cuentamap["cuentas"] as List).length,
@@ -158,9 +155,7 @@ class _ProfileState extends State<Profile> {
                           terminacion: (state.cuentamap["cuentas"][index]["tarjeta"]).toString().substring(5),
                           saldoDisponible: (state.cuentamap["cuentas"][index]["dinero"]).toString(),
                           );
-
-                      },
-                                      ),
+                      },),
                     );
                   } else if (state is CuentasErrorState) {
                     return Text("No hay datos disponibles");
