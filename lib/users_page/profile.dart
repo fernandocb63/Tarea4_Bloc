@@ -158,7 +158,7 @@ class _ProfileState extends State<Profile> {
                       },),
                     );
                   } else if (state is CuentasErrorState) {
-                    return Text("No hay datos disponibles");
+                    return Text("No hay cuentas por mostrar");
                   } else {
                     return CircularProgressIndicator();
                   }
