@@ -24,7 +24,7 @@ class CuentasBloc extends Bloc<CuentasEvent, CuentasState> {
 
   Future _getLista() async {
     try {
-      http.Response res = await http.get(Uri.parse("https://api.sheety.co/d89b0f60f5a721cba13b0538b7530c40/dummyApi/cuentas"));
+      http.Response res = await http.get(Uri.parse("https://api.sheety.co/7229214c7d05c47fe21e33ee1ca15e51/api/sheet1"));
       if(res.statusCode == HttpStatus.ok)
         return jsonDecode(res.body);
     } catch (e) {print(e);}

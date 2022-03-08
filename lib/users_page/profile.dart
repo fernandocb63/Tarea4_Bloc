@@ -148,12 +148,12 @@ class _ProfileState extends State<Profile> {
                   if (state is CuentaSelected){
                     return Expanded(
                       child: ListView.builder(
-                      itemCount: (state.cuentamap["cuentas"] as List).length,
+                      itemCount: (state.cuentamap["sheet1"] as List).length,
                       itemBuilder: (BuildContext context, int index) {
                         return CuentaItem(
-                          tipoCuenta: state.cuentamap["cuentas"][index]["cuenta"].toString(),
-                          terminacion: (state.cuentamap["cuentas"][index]["tarjeta"]).toString().substring(5),
-                          saldoDisponible: (state.cuentamap["cuentas"][index]["dinero"]).toString(),
+                          tipoCuenta: state.cuentamap["sheet1"][index]["cuenta"].toString(),
+                          terminacion: (state.cuentamap["sheet1"][index]["tarjeta"]).toString().substring(5),
+                          saldoDisponible: (state.cuentamap["sheet1"][index]["dinero"]).toString(),
                           );
                       },),
                     );
